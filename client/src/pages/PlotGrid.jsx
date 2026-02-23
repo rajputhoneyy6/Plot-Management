@@ -12,7 +12,7 @@ function PlotGrid() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4090/api/plots/${block}`)
+      .get(`${import.meta.env.VITE_API_URL}/api/plots/${block}`)
       .then((res) => setPlots(res.data))
       .catch((err) => console.log(err));
   }, [block]);
