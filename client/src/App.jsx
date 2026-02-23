@@ -7,7 +7,7 @@ import PlotGrid from "./pages/PlotGrid";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import AdminDashboard from "./pages/AdminDashboard";
-import AboutUs from "./pages/AboutUs";
+import AboutUs from "./pages/Aboutus";
 import ContactUs from "./pages/ContactUs";
 import Home from "./pages/Home";
 
