@@ -144,6 +144,11 @@ app.get("/api/plots/:block", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+}); 
+
+app.get("/clear-plots", async (req, res) => {
+  await Plot.deleteMany({});
+  res.json({ message: "All plots deleted" });
 });
 
 
