@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import AdminDashboard from "./pages/AdminDashboard";
 import AboutUs from "./pages/Aboutus";
-import ContactUs from "./pages/ContactUs";
+import ContactUs from "./pages/Contactus";
 import Home from "./pages/Home";
 
 import PrivateRoute from "./components/PrivateRoute";
