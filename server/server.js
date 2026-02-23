@@ -118,14 +118,15 @@ app.get("/create-plots", async (req, res) => {
 
     for (let block of blocks) {
       for (let i = 1; i <= 100; i++) {
-        await Plot.create({
-          block,
-          plotNumber: i
-        });
+        await Plot.updateOne(
+          { block, plotNumber: i },
+          { $setOnInsert: { block, plotNumber: i, status: "available" } },
+          { upsert: true }
+        );
       }
     }
 
-    res.json({ message: "All plots created successfully ✅" });
+    res.json({ message: "Plots created safely ✅" });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
