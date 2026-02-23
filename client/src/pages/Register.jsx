@@ -14,10 +14,7 @@ function Register() {
 
   const handleRegister = async () => {
     try {
-      await axios.post(
-        "http://localhost:4090/api/auth/register",
-        form
-      );
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, data,form);
 
       alert("Registered Successfully");
       navigate("/login");
